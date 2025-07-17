@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(241, 238, 238);
+    color: rgb(26, 25, 25);
+}
+
+header {
+    display: flex;
+    gap: 50px;
+    background-color: rgb(143, 135, 244);
+    padding: 20px;
+}
+
+img {
+    border-radius: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+/*
+    ini penggunaan pada class. menggunakan .
+*/
+
+.button-save {
+    color: white;
+    background-color: rgb(18, 90, 18);
+}
+
+.button-cancel {
+    color: white;
+    background-color: rgb(229, 17, 169);
+}
+
+/*
+    ini penggunaan pada id. menggunakan #
+*/
+
+#danger {
+    color: white;
+    background-color: rgb(232, 8, 8);
+}
