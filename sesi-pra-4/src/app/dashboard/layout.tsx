@@ -5,11 +5,16 @@ export default function HobiDetailLayout({ children }: { children: React.ReactNo
     <div className="flex">
       <aside className="w-64 bg-gray-100 p-4">
         <h2 className="font-bold mb-4">Sidebar</h2>
-        <ul className="space-y-2">
-          <li><a href="/">HomePage</a></li>
-          <li><a href="#">Profil</a></li>
-          <li><a href="#">Logout</a></li>
-        </ul>
+        <div className="flex-row">
+          <ul className="space-y-2">
+            <li><a href="/">HomePage</a></li>
+            <li><a href="#">Profil</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+          <div className="flex-auto">
+
+          </div>
+        </div>
       </aside>
 
       {/* Main content */}
