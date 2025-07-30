@@ -19,3 +19,8 @@ export const updatePostById = async (id, postData) => {
 export const deletePostById = async (id) => {
     return await deletePostByIdRepo(id)
 }
+
+// middleware
+// validation
+// jwttoken
+// pelan2 integrasi fe.
