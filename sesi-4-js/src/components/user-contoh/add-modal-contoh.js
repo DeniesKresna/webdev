@@ -11,10 +11,9 @@ export default function AddUserContohModal({ isShow, onClose, onSubmit }){
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    const userData = { name, email, password, role }
+    const userData = { name:name, email:email, password:password, role:role }
     onSubmit(userData)
 
-    // Reset & close
     setName('')
     setEmail('')
     setPassword('')

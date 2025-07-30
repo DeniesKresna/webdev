@@ -7,35 +7,34 @@ export default function LoginModal({ isShow, onClose, onSuccessLogin }){
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const submitLogin = async() =>{
+  const submitLogin = async(loginData) =>{
     try {
-        const loginData = {
-            email, password
-        }
-        const response = await api.post('/users/login', loginData)
-        if(response.success){
-            const token = response.data
-            localStorage.setItem('token', `Bearer ${token}`)
-            onSuccessLogin()
-        }
-        return true
+      const response = await api.post('/users/login', loginData)
+      if(response.success){
+        const token = response.data
+        localStorage.setItem('token', `Bearer ${token}`)
+        onSuccessLogin()
+      }
     } catch (error) {
-        alert(error.message)
-        return false
+      alert(error.message)
+      return false
     }
+    return true
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
     const loginData = { email, password }
-    const res = await submitLogin()
+    const res = await submitLogin(loginData)
 
     // Reset & close
     setEmail('')
     setPassword('')
 
-    res && onClose()
+    if(res){
+      onClose()
+    }
   }
 
   if (!isShow) return null

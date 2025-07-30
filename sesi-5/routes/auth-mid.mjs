@@ -4,7 +4,7 @@ export const authMiddleware = (req, res, next) => {
     if(!req.headers.authorization){
         return res.status(401).json({
             success: false,
-            message: "tidak ada authentikasi"
+            message: "tidak ada authorization header"
         })
     }
 

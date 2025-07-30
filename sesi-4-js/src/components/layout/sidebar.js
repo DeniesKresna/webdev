@@ -8,17 +8,21 @@ export default function LaySidebar(){
     const [isLoggedIn, setIsLoggedIn] = useState(false)
 
     const handleSuccessLogin = () => {
+        console.log("login berhasil")
         setIsLoggedIn(true)
     }
 
     const handleSuccessLogout = () => {
+        console.log("logout berhasil")
         localStorage.removeItem('token')
         setIsLoggedIn(false)
     }
 
     useEffect(() => {
         const token = localStorage.getItem('token')
-        token && setIsLoggedIn(true)
+        if(token){
+            setIsLoggedIn(true)
+        }
     }, [])
 
     const handleLogClick = () => {

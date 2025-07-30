@@ -1,7 +1,7 @@
 "use client"
 
 import AddUserContohModal from '@/components/user-contoh/add-modal-contoh'
-import {api} from '@/lib/axios'
+import {api} from '@/lib/axios-contoh'
 import { useEffect, useState } from 'react'
 
 export default function DashboardUserPage(){

@@ -12,6 +12,7 @@ const homeRoute = (req, res) => {
     res.send("Hello World baru sekaliiiiiii")
 }
 
+// npm install cors
 app.use(cors())
 app.use(express.json())
 app.get("/", homeRoute)
